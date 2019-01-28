@@ -1,4 +1,4 @@
-# yaz_cmd_perl
+# yaz_cmd_tcl
 ## Requires 
 * [http://zoom.z3950.org/bind/tcl/](http://zoom.z3950.org/bind/tcl/)
   * ~~[http://gondolin.hist.liv.ac.uk/~cheshire/zoom/tcl.html](http://gondolin.hist.liv.ac.uk/~cheshire/zoom/tcl.html)~~ DOWN

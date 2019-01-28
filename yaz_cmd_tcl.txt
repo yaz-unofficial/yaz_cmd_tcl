@@ -1,0 +1,33 @@
+#!/usr/local/bin/tclsh
+source zoom-1.2.tcl
+
+proc get_records {host port dbname user pw syntax query} {
+object Connection conn $host $port
+conn.setOption "database" $dbname
+conn.setOption "preferredRecordSyntax" $syntax
+conn.setOption "user" $user
+conn.setOption "password" $pw
+object Query query1 0 $query
+set rs [conn.search [query1]]
+set rec [$rs.getRecord 0]
+puts [$rec.getRaw]
+}
+
+if {$argc == 2} {
+if {[lindex $argv 0] == "--test"} {
+set host "1"
+set port "2"
+set dbname "3"
+set user "4"
+set pw "5"
+set syntax "6"
+set query "7"
+if {[lindex $argv 1] == "1"} {
+set host "h1"
+}
+get_records $host $port $dbname $user $pw $syntax $query
+}
+} elseif {$argc == 7} {
+get_records [lindex $argv 0] [lindex $argv 1] [lindex $argv 2] [lindex $argv 3] [lindex $argv 4] [lindex $argv 5] [lindex $argv 6]
+} else {puts "Error, not enough arguments"
+}

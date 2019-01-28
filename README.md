@@ -1,5 +1,6 @@
 # yaz_cmd_tcl
 ## Requires 
+* `tcl`
 * [http://zoom.z3950.org/bind/tcl/](http://zoom.z3950.org/bind/tcl/)
   * ~~[http://gondolin.hist.liv.ac.uk/~cheshire/zoom/tcl.html](http://gondolin.hist.liv.ac.uk/~cheshire/zoom/tcl.html)~~ DOWN
 
